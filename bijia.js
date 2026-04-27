@@ -1,6 +1,6 @@
 [rewrite_local]
 # >京东比价
-^https？:\/\/api\.m\.jd\.com\\/product\/graphext\/\d+\.html url script-response-body https://raw.githubusercontent.com/maybe2023/666/main/bijia.js
+^https?:\/\/api\.m\.jd\.com\/product\/graphext\/\d+\.html url script-response-body https://raw.githubusercontent.com/maybe2023/666/main/bijia.js
 
 [mitm]
 hostname = api.m.jd.com
