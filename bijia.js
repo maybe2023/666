@@ -1,8 +1,13 @@
+# 京东APP 比价+历史价格 增强
 [rewrite_local]
-^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html url script-response-body https://raw.githubusercontent.com/maybe2023/666/main/bijia.js
+# 商品详情页价格接口劫持
+^https?://api\.m\.jd\.com/client/ware/product/price\.json url script-response-body https://raw.githubusercontent.com/maybe2023/666/main/bijia.js
+^https?://in\.m\.jd\.com/product/graphext/\d+\.html url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
+# 京东通用比价拦截
+^https?://c0\.jd\.com/|\.jd\.com/ware/|\.jd\.com/item/ url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
 [mitm]
-hostname = in.m.jd.com
+hostname = *.jd.com, api.m.jd.com, in.m.jd.com
 
 
 
